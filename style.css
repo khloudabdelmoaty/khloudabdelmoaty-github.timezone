@@ -1,0 +1,1523 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+*
+{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+body
+{
+    font-family: 'Josefin Sans', sans-serif;
+    overflow-x: hidden;
+}
+.navbar
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar .navbar-logo
+{
+    padding: 40px 20px;
+}
+.navbar .navbar-links
+{
+    display: inline-flex;
+    padding: 45px 0px;
+    
+}
+.navbar .navbar-links li
+{
+    list-style: none;
+}
+.navbar .navbar-links li a
+{
+    color: black;
+    text-decoration: none;
+    margin-right: 35px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.navbar .navbar-links li a:hover
+{
+    color: #dd2020;
+}
+.navbar .navbar-links .dropdown
+{
+    position: relative;
+}
+.navbar .navbar-links .dropdown-content
+{
+    position: absolute;
+    width: 180px;
+    height: 100px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 3px rgb(0 0 0 / 5%);
+    top: 75px;
+    border-radius: 10px;
+    border-top: 5px solid #c41515;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    opacity: 0;
+}
+.navbar .navbar-links .dropdown-content::before
+{
+    border-style: solid;
+    border-width: 0 6px 6px 6px;
+    border-color: transparent transparent red transparent;
+    content: "";
+    top: -11px;
+    left: 13%;
+    position: absolute;
+    transition: .3s;
+    z-index: -1;
+    overflow: hidden;
+    -webkit-transition: all .3s ease-out 0s;
+    
+}
+.navbar .navbar-links .drop:hover .dropdown-content
+{
+    opacity: 1;
+}
+.navbar .navbar-links .dropdown::after
+{
+    position: absolute;
+    top: -30px;
+    left: 30px;
+    content: "HOT";
+    width: 25px;
+    height: 12px;
+    padding: 5px 4px;
+    background-color: #ff003c;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.navbar .navbar-links .dropdown-content li
+{
+    padding: 12px 10px;
+}
+.navbar .navbar-icon
+{
+    display: inline-flex;
+    padding: 40px 30px;
+}
+.navbar .navbar-icon li
+{
+    list-style: none;
+    padding-left: 30px;
+    font-size: 16px;
+    font-weight: 300;
+}
+.navbar .navbar-icon li a
+{
+    color: gray;
+}
+.navbar > input
+{
+    display: none;
+}
+.navbar label
+{
+    display: none;
+    padding: 45px 30px;
+    color: #ff2020;
+}
+
+/* --------------------  Start Navbar media query  -------------------------- */
+
+@media (max-width: 1024px) {
+    .navbar .navbar-links
+    {
+        display: block;
+        position: absolute;
+        margin-top: 108px;
+        width: 90%;
+        margin-left: 5%;
+        padding-left: 40px;
+        background-color: #fff;
+        z-index: 1;
+        opacity: 0;
+        transition: .5s all;
+        -webkit-transition: .5s all;
+        -moz-transition: .5s all;
+        -ms-transition: .5s all;
+        -o-transition: .5s all;
+}
+.navbar .navbar-icon
+{
+    display: none;
+}
+    .navbar .navbar-links li
+    {
+        text-align: left;
+        padding: 12px;
+        padding-top: 0px;
+        color: #ff2020;
+    }
+    .navbar .navbar-links li a
+    {
+        color: #ff2020;
+        padding-bottom: 10px;
+    }
+    .navbar .navbar-links .dropdown::after
+    {
+        content: none;
+    }
+    .navbar .navbar-icon
+    {
+        position: absolute;
+        left: 350px;
+        top: 8px;
+    }
+    .navbar .navbar-icon li
+    {
+        padding-left: 10px;
+    }
+    .navbar label
+    {
+        width: 40px;
+        display: block;
+    }
+    .navbar input
+    {
+        display: none;
+    }
+    .navbar input:checked ~ .navbar-links
+    {
+        opacity: 1;
+    }
+}
+@media (max-width: 767px) {
+    .navbar .navbar-links
+    {
+        display: block;
+        position: absolute;
+        margin-top: 108px;
+        width: 90%;
+        margin-left: 5%;
+        padding-left: 40px;
+        background-color: #fff;
+        z-index: 1;
+        opacity: 0;
+        transition: .5s all;
+        -webkit-transition: .5s all;
+        -moz-transition: .5s all;
+        -ms-transition: .5s all;
+        -o-transition: .5s all;
+}
+    .navbar .navbar-links li
+    {
+        text-align: left;
+        padding: 12px;
+        padding-top: 0px;
+        color: #ff2020;
+    }
+    .navbar .navbar-links li a
+    {
+        color: #ff2020;
+        padding-bottom: 10px;
+    }
+    .navbar .navbar-links .dropdown::after
+    {
+        content: none;
+    }
+    .navbar .navbar-icon
+    {
+        position: absolute;
+        left: 150px;
+        top: 8px;
+    }
+    .navbar .navbar-icon li
+    {
+        padding-left: 10px;
+    }
+    .navbar label
+    {
+        width: 40px;
+        display: block;
+    }
+    .navbar input
+    {
+        display: none;
+    }
+    .navbar input:checked ~ .navbar-links
+    {
+        opacity: 1;
+    }
+}
+
+/* --------------------  End Navbar media query  -------------------------- */
+
+/* --------------------------  Start select section   -------------------------- */
+.Select
+{
+    width: 100%;
+    height: 700px;
+    background-color: #f0f0f2;
+    display: flex;
+    overflow: hidden;
+}
+.Select .select-content
+{
+    margin-left: 10%;
+    margin-top: 200px;
+    width: 60%;
+}
+.Select .select-img
+{
+    width: 25%;
+    
+    animation-name: imgScale;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes imgScale {
+    0%
+    {
+        transform: scale();
+        -webkit-transform: scale();
+        -moz-transform: scale();
+        -ms-transform: scale();
+        -o-transform: scale();
+}
+    100%
+    {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+}
+}
+.Select .select-img img
+{
+    width: 80%;
+    height: 100%;
+    background-size: cover;
+}
+.Select .select-content .select-headline
+{
+    font-size: 95px;
+}
+.Select .select-content .select-btn
+{
+    position: relative;
+    width: 150px;
+    height: px;
+    margin-top: 30px;
+    padding: 22px 22px;
+    background-color: gray;
+    color: #fff;
+    border: none;
+    z-index: 1;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.03em
+}
+.Select .select-content .select-btn:hover::before
+{
+    width: 100%;
+}
+.Select .select-content .select-btn::before
+{
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: #ff2020;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -ms-transition: .5s all;
+    -o-transition: .5s all;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+.Select .select-content .select-text
+{
+    font-size: 17px;
+    line-height: 1.6;
+    font-weight: 400;
+    margin-bottom: 39px;
+    color: #212025;
+    margin-bottom: 60px;
+    padding-right: 50px;
+}
+.Select .select-content .select-btn a
+{
+    color: #fff;
+    text-decoration: none;
+}
+/* --------------------------  End select section   -------------------------- */
+
+/* --------------------------  Start media query select section   -------------------------- */
+@media (max-width: 1024px) {
+    .Select
+    {
+        height: 470px;    
+    }
+    .Select .select-img
+    {
+        display: none;
+    }
+    .Select .select-content
+    {
+        width: 100%;
+    }
+    .Select .select-content .select-headline
+    {
+        font-size: 33px;
+        line-height: 1.2;
+        margin-bottom: 26px;
+        margin-top: -90px;
+    }
+    .Select .select-content .select-text
+    {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .Select .select-content .select-text p
+    {
+        font-size: 15px;
+        line-height: 1.8;
+        font-weight: 400;
+        margin-bottom: 39px;
+        color: #212025;
+        padding-right: 50px;
+    }
+}
+@media (max-width: 767px) {
+    .Select .select-img
+    {
+        display: none;
+    }
+    .Select .select-content
+    {
+        width: 100%;
+    }
+    .Select .select-content .select-headline
+    {
+        font-size: 33px;
+        line-height: 1.2;
+        margin-bottom: 26px;
+        margin-top: -90px;
+    }
+    .Select .select-content .select-text
+    {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .Select .select-content .select-text p
+    {
+        font-size: 15px;
+        line-height: 1.8;
+        font-weight: 400;
+        margin-bottom: 39px;
+        color: #212025;
+        padding-right: 50px;
+    }
+    .Select .select-content .select-btn
+    {
+    
+    }
+}
+/* --------------------------  End media query select section   -------------------------- */
+
+
+/* -------------------------- Start New Arrival section ------------------------------- */
+.Arrival
+{
+    position: relative;
+    margin-top: 100px;
+}
+.Arrival .headline
+{
+    padding-left: 180px;
+    padding-bottom: 30px;
+    color: #000;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+}
+.Arrival .Arrival-content
+{
+    display: flex;
+    justify-content: center;
+}
+.Arrival .Arrival-content > div
+{
+    margin: 20px;
+    
+}
+.Arrival .Arrival-content > div .arrival-img
+{
+    overflow: hidden;
+}
+.Arrival .Arrival-content > div .arrival-img img
+{
+    object-fit: cover;
+    transition: 1s all;
+    -webkit-transition: 1s all;
+    -moz-transition: 1s all;
+    -ms-transition: 1s all;
+    -o-transition: 1s all;
+}
+.Arrival .Arrival-content > div .arrival-img img:hover
+{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+.Arrival .Arrival-content > div .description
+{
+    text-align: center;
+    margin-top: 10px;
+}
+.Arrival .Arrival-content > div .description span
+{
+    color: #ff2020;
+    padding-top: 20px;
+}
+/* -------------------------- End New Arrival section ------------------------------- */
+
+/* -------------------------- Start media query New Arrival section ------------------------------- */
+@media (max-width:1100px) {
+    .Arrival
+    {
+        width: 100%;
+    }
+    .Arrival .headline
+    {
+        width: 100%;
+        padding-left: 0px;
+        text-align: center;
+        font-size: 35px;
+    }
+    .Arrival .Arrival-content
+    {
+        width: 100%;
+        display: flex;
+        /* flex-flow: row wrap; */
+    }
+    .Arrival .Arrival-content > div
+    {
+        width: 30%;
+    }
+    .Arrival .Arrival-content > div .arrival-img
+    {
+        width: 100%;
+        
+    }
+}
+@media (max-width:991px) {
+    .Arrival
+    {
+        width: 100%;
+    }
+    .Arrival .headline
+    {
+        width: 100%;
+        padding-left: 0px;
+        text-align: center;
+        font-size: 35px;
+    }
+    .Arrival .Arrival-content
+    {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .Arrival .Arrival-content > div
+    {
+        width: 44%;
+    }
+    .Arrival .Arrival-content > div .arrival-img
+    {
+        width: 100%;
+        
+    }
+}
+@media (max-width: 767px) {
+    .Arrival
+    {
+        width: 100%;
+    }
+    .Arrival .headline
+    {
+        width: 100%;
+        padding-left: 0px;
+        text-align: center;
+        font-size: 35px;
+    }
+    .Arrival .Arrival-content
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .Arrival .Arrival-content > div
+    {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+/* -------------------------- End media query New Arrival section --------------------------------- */
+
+
+/* -------------------------- Start photos section --------------------------------- */
+.photos
+{
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: repeat(2, 400px);
+    grid-gap: 20px;
+}
+.photos > div
+{
+    overflow: hidden;
+}
+.photos > div img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transition: 1s all;
+    -webkit-transition: 1s all;
+    -moz-transition: 1s all;
+    -ms-transition: 1s all;
+    -o-transition: 1s all;
+}
+.photos > div img:hover
+{
+    filter: grayscale(100%);
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    -webkit-filter: grayscale(100%);
+}
+.photos > div:nth-child(1)
+{
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+.photos > div:nth-child(2)
+{
+    grid-column: 3/5;
+    grid-row: 1/3;
+}
+.photos > div:nth-child(3)
+{
+    grid-column: 5/6;
+    grid-row: 1/1;
+}
+.photos > div:nth-child(4)
+{
+    grid-column: 5/6;
+    grid-row: 2/3;
+}
+
+/* -------------------------- End photos section --------------------------------- */
+
+/* -------------------------- Start media query photos section --------------------------------- */
+@media (max-width:1025px) {
+    .photos
+    {
+        display: flex;
+        flex-flow: row wrap;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .photos > div
+    {
+        width: 48%;
+    }
+    .photos > div img
+    {
+        width: 100%;
+    }
+    .photos > div:nth-child(1)
+    {
+
+        height: 550px;
+    }
+    .photos > div:nth-child(2)
+    {
+        
+        height: 550px;
+    }
+    .photos > div:nth-child(3)
+    {
+        height: 300px;
+    }
+    .photos > div:nth-child(4)
+    {
+        height: 300px;
+    }
+}
+@media (max-width:767px) {
+    .photos
+    {
+        display: flex;
+        flex-flow: column wrap;
+        height: 1300px;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;;
+    }
+    .photos > div
+    {
+        width: 100%;
+    }
+    .photos > div img
+    {
+        width: 100%;
+    }
+    .photos > div:nth-child(1) img
+    {
+        height: 450px;
+    }
+    .photos > div:nth-child(2)
+    {
+        height: 300px;
+        margin-top: -70px;
+    }
+    .photos > div:nth-child(3)
+    {
+        height: 200px;
+    }
+    .photos > div:nth-child(4)
+    {
+        height: 200px;
+    }
+}
+/* -------------------------- End media query photos section --------------------------------- */
+
+
+
+/* ---------------------------   Start Popular section   -------------------------- */
+.popular
+{
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+.popular .popular-headline
+{
+    color: #000;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    padding-top: 30px;
+}
+.popular .popular-text
+{
+    width: 45%;
+    color: #777;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 15px;
+    font-weight: normal;
+    text-align: center;
+    margin: 20px auto;
+}
+.popular .popular-box
+{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-flow: row wrap;
+    width: 80%;
+    margin-left: 10%;
+}
+.popular .popular-item
+{
+    overflow: hidden;
+    width: 30%;
+    padding-bottom: 40px;
+    position: relative;
+}
+.popular  .popular-item .item {
+    border-bottom: 4px solid #ff2200;
+    overflow: hidden;
+}
+.popular  .popular-item .item img{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.popular .popular-box .popular-item .content
+{
+    margin-top: 30px;
+    text-align: center;
+}
+.popular .popular-box .popular-item .content h3
+{
+    color: #0b1c39;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: 500;
+}
+.popular .popular-box .popular-item .content span
+{
+    color: #444444;
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+}
+.popular .popular-box .popular-item .overlay
+{
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    background-color: #e41212;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    bottom: 127px;
+    transition: all .4s ease-out;
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -ms-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+}
+.popular .popular-box .popular-item:hover .overlay
+{
+    padding: 25px;
+    opacity: 1;
+}
+.popular .popular-ptn
+{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 70px;
+    color: #fff;
+    background-color: #ff003c;
+    padding: 30px;
+}
+.popular .popular-box .popular-btn .btn
+{
+    position: relative;
+    width: 250px;
+    margin-top: 70px;
+    padding: 22px 22px;
+    background-color: gray;
+    color: #fff;
+    border: none;
+    z-index: 1;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.03em
+}
+.popular .popular-box .popular-btn .btn:hover::before
+{
+    width: 100%;
+}
+.popular .popular-box .popular-btn .btn::before
+{
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: #ff2020;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -ms-transition: .5s all;
+    -o-transition: .5s all;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+/* ---------------------------   End Popular section   -------------------------- */
+
+/* ---------------------------   Start media query Popular section   -------------------------- */
+@media (max-width:767px) {
+    .popular .popular-headline
+    {
+        width: 80%;
+        font-size: 30px;
+        margin-top: 20px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .popular .popular-text
+    {
+        width: 80%;
+        font-size: 18px;
+        margin-top: 20px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .popular .popular-box
+    {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        flex-flow: column wrap;
+    }
+    .popular .popular-item
+    {
+        width: 100%;
+    }
+    .popular .popular-box .popular-btn .btn
+    {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 18px;
+        padding: 25px 14px;
+    }
+}
+/* ---------------------------   End media query Popular section   -------------------------- */
+
+/* -----------------------   Start video section   ------------------------- */
+.bg-video
+{
+    background-image: url("images/sectin_bg1.webp");
+    /* background-size: cover; */
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 600px;
+}
+/* .bg-video::before
+{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(146 133 133 / 42%);
+} */
+.bg-video .video
+{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%);
+    -moz-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    -o-transform: translate(-50% , -50%);
+}
+.bg-video .video a
+{
+    display: inline-block;
+    border: 2px solid #fff;
+    padding: 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+.bg-video:hover .video a
+{
+    transform: scale(1.07);
+    -webkit-transform: scale(1.07);
+    -moz-transform: scale(1.07);
+    -ms-transform: scale(1.07);
+    -o-transform: scale(1.07);
+}
+.bg-video .video a:hover
+{
+    
+    background-color: #fff;
+    color: red;
+}
+.bg-video .video a:hover i
+{
+    
+    color: red;
+}
+.bg-video .video a i
+{
+    font-size: 24px;
+    color: #fff;
+}
+.bg-video .next-video
+{
+    z-index: 100;
+    width: 32%;
+    padding: 70px 30px;
+    background-image: url(images/vidoe_more.png);
+    position: absolute;
+    bottom: 0px;
+    
+}
+.bg-video .next-video span
+{
+    color: #fff;
+    font-size: 24px;
+    padding-left: 30px;
+    padding-right: 200px;
+}
+.bg-video .next-video i
+{
+    color: #fff;
+}
+/* -----------------------   End video section   ------------------------- */
+
+/* ---------------------------   End media query video section   -------------------------- */
+@media (max-width:1100px) {
+    .bg-video{
+        width: 100%;
+        background-size: cover;
+    }
+    .bg-video .next-video
+    {
+        width: 50%;
+        padding: 35px 80px;
+    }
+    .bg-video .next-video span
+    {
+        padding-right: 180px;
+        padding-left: 20px;
+    }
+}
+@media (max-width:991px) {
+    .bg-video{
+        width: 100%;
+    }
+    .bg-video .next-video
+    {
+        width: 55%;
+        padding: 35px 80px;
+    }
+    .bg-video .next-video span
+    {
+        padding-right: 100px;
+        padding-left: 20px;
+    }
+}
+@media (max-width:767px) {
+    .bg-video{
+        width: 100%;
+    }
+    .bg-video .next-video
+    {
+        width: 70%;
+        padding: 35px 5px;
+    }
+    .bg-video .next-video span
+    {
+        padding-right: 70px;
+        padding-left: 20px;
+    }
+
+}
+/* ---------------------------   End media query video section   -------------------------- */
+
+/* -----------------------   Start watch section   ------------------------- */
+.watch
+{
+    margin: 100px 0px 0px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+    width: 80%;
+    margin-left: 10%;
+}
+.watch .watch-one
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.watch .watch-one .watch-content
+{
+    width: 48%;
+}
+.watch .watch-one .watch-content h2
+{
+    color: #000;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+.watch .watch-one .watch-content p
+{
+    color: #777;
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+.watch .watch-one .watch-content button
+{
+    position: relative;
+    width: 250px;
+    margin-top: 50px;
+    padding: 22px 22px;
+    background-color: #ff2020;
+    color: #fff;
+    border: none;
+    z-index: 1;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.03em
+}
+.watch .watch-one .watch-content button:hover::before
+{
+    width: 100%;
+}
+.watch .watch-one .watch-content button::before
+{
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: #4a4a4b;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -ms-transition: .5s all;
+    -o-transition: .5s all;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+.watch .watch-one .watch-img
+{
+    width: 45%;
+}
+.watch .watch-one .watch-img img
+{
+    width: 100%;
+}
+/* -----------------------   End watch section   ------------------------- */
+
+/* ---------------------------   Start media query Watch section   -------------------------- */
+@media (max-width:991px) {
+    .watch .watch-one .watch-content
+    {
+        width: 45%;
+        margin-bottom: 30px;
+    }
+    .watch .watch-one .watch-img
+    {
+        width: 45%;
+        margin-bottom: 30px;
+    }
+    .watch .watch-one .watch-content h2
+    {
+        font-size: 35px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    .watch .watch-one .watch-content p
+    {
+        margin-bottom: 0px;
+    }
+    .watch .watch-one .watch-content button
+    {
+        width: 200px;
+        margin-top: 20px;
+        font-size: 20px;
+        padding: 20px 10px;
+    }
+}
+@media (max-width:767px) {
+    .watch .watch-one .watch-content
+    {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .watch .watch-one .watch-img
+    {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .watch .watch-one .watch-content h2
+    {
+        font-size: 35px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .watch .watch-one .watch-content button
+    {
+        width: 200px;
+        font-size: 20px;
+        padding: 20px 10px;
+    }
+}
+/* ---------------------------   End media query Watch section   -------------------------- */
+
+/* -----------------------   Start shop section   ------------------------- */
+.shop
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    background-color: #ff2200;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 40px;
+}
+.shop .shop-item
+{
+    width: 28%;
+    padding: 50px 30px;
+    color: #fff;
+}
+.shop .shop-item i
+{
+    font-size: 40px;
+    color: #ffff;
+    margin-bottom: 25px;
+    display: block;
+}
+.shop .shop-item h6
+{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+.shop .shop-item p
+{
+    font-size: 16px;
+    line-height: 30px;
+    color: #d3d1d1;
+}
+
+/* -----------------------   End shop section   ------------------------- */
+
+/* ---------------------------   Start media query shop section   -------------------------- */
+@media (max-width:1100px) {
+    .shop
+    {
+        width: 90%;
+        flex-flow: row wrap;
+        margin-top: 0px;
+    }
+    .shop
+    {
+        width: 80%;
+    }
+    .shop .shop-item
+    {
+       width: 33%;
+       padding: 20px 40px;
+    }
+    .shop .shop-item h6
+    {
+       font-size: 16px;
+    }
+}
+@media (max-width:991px) {
+    .shop
+    {
+        width: 80%;
+        flex-flow: row wrap;
+        margin-top: 0px;
+    }
+    .shop .shop-item
+    {
+       width: 47%;
+       padding: 20px 40px;
+    }
+}
+@media (max-width:767px) {
+    .shop
+    {
+        width: 90%;
+        margin-left: 5%;
+        flex-flow: column wrap;
+        margin-top: 0px;
+    }
+    .shop .shop-item
+    {
+       width: 100%;
+       padding: 20px 40px;
+    }
+}
+/* ---------------------------   End media query shop section   -------------------------- */
+
+/* -----------------------   Start Footer section   ------------------------- */
+footer
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 80%;
+    margin-left: 10%;
+}
+footer .footer-item
+{
+    width: 23%;
+    margin-top: 50px;
+}
+footer .footer-item h4
+{
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+footer .footer-content
+{
+    width: 30%;
+    margin-top: 40px;
+}
+footer .footer-content p
+{
+    padding-top: 20px;
+    color: #868c98;
+    font-size: 16px;
+    margin-bottom: 50px;
+    line-height: 1.8;
+    width: 80%;
+}
+footer > div ul
+{
+    padding-top: 35px;
+}
+footer > div ul li
+{
+    list-style: none;
+    padding-bottom: 15px;
+}
+footer > div ul li a
+{
+    text-decoration: none;
+    color: #868c98;
+    font-weight: 400;
+}
+.copy
+{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    position: relative;
+}
+.copy .copy-text
+{
+    width: 60%;
+    color: #888888;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 20px;
+    
+}
+.copy .copy-text p span
+{
+    color: #ff2200;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 2px solid #ff2200;
+    cursor: pointer;
+}
+.copy .social
+{
+    width: 40%;
+    padding-left: 200px;
+}
+.copy .social a
+{
+    padding-left: 20px;
+}
+.copy .social a i
+{
+    color: #4a4a4b;
+}
+/* -----------------------   End Footer section   ------------------------- */
+
+/* ---------------------------   Start media query footer section   -------------------------- */
+@media (max-width:1100px) {           /* Responsive to mobile screen like ipad pro - width=1024 */
+    .copy
+    {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .copy .copy-text
+    {
+        width: 50%;
+    }
+    .copy .copy-text p
+    {
+        font-size: 25px;
+        width: 100%;
+    }
+    .copy .copy-text p span
+    {
+        color: #ff2200;
+        font-size: 18px;
+        font-weight: bold;
+        border-bottom: 2px solid #ff2200;
+        cursor: pointer;
+    }
+    .copy .social
+    {
+        width: 50%;
+        padding: 30px 20px 10px 170px;
+    }
+    .copy .social a
+    {
+        padding-left: 15px;
+        font-size: 35px;
+    }
+}
+@media (max-width:991px) {           /* Responsive to mobile screen like ipad width=991px */
+    footer
+    {
+        width: 90%;
+        flex-flow: row wrap;
+    }
+    footer .footer-content
+    {
+        width: 90%;
+    }
+    footer .footer-item
+    {
+        width: 30%;
+        margin-top: 20px;
+        font-size: 15px;
+    }
+    .copy
+    {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .copy .copy-text
+    {
+        width: 50%;
+    }
+    .copy .copy-text p
+    {
+        font-size: 18px;
+        width: 100%;
+    }
+    .copy .copy-text p span
+    {
+        color: #ff2200;
+        font-size: 18px;
+        font-weight: bold;
+        border-bottom: 2px solid #ff2200;
+        cursor: pointer;
+    }
+    .copy .social
+    {
+        width: 50%;
+        padding: 30px 20px 10px 130px;
+    }
+    .copy .social a
+    {
+        padding-left: 15px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width:767px) {       /* Responsive to mobile screen like iphoneX - width=767px */
+    footer
+    {
+        width: 90%;
+        flex-flow: column wrap;
+    }
+    footer .footer-content
+    {
+        width: 90%;
+    }
+    footer .footer-item
+    {
+        width: 90%;
+        margin-top: 20px;
+    }
+    .copy
+    {
+        width: 80%;
+        margin-left: 20%;
+        padding: 10px 0px 40px 0px;
+        flex-flow: column wrap;
+        position: relative;
+    }
+    .copy .copy-text
+    {
+        width: 100%;
+        position: absolute;
+        left: -30px;
+    }
+    .copy .copy-text p
+    {
+        width: 100%;
+    }
+    .copy .copy-text p span
+    {
+        color: #ff2200;
+        font-size: 18px;
+        font-weight: bold;
+        border-bottom: 2px solid #ff2200;
+        cursor: pointer;
+    }
+    .copy .social
+    {
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        margin-bottom: 50px;
+        top: 115px;
+        left: -110px;
+    }
+    .copy .social a
+    {
+        display: inline-block;
+        margin: 0px;
+        padding: 0px;
+    }
+}
+/* ---------------------------   End media query footer section   -------------------------- */
